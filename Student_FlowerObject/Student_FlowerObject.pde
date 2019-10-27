@@ -29,12 +29,18 @@ void draw() {
   myFlower1 = new Flower(_r, _petals, mouseX, mouseY, _pc); 
   myFlower1.display();
   myFlower1.bounce();
+  myFlower1.coll(myFlower2);
+  myFlower1.coll(myFlower3);
   myFlower2.display();
   myFlower2.move2(/*5*/);
   myFlower2.bounce();
+  myFlower1.coll(myFlower1);
+  myFlower1.coll(myFlower3);
   myFlower3.display();
   myFlower3.move(/*7*/);
   myFlower3.bounce();
+  myFlower1.coll(myFlower1);
+  myFlower1.coll(myFlower2);
   //myFlower3.coloring();
 }
 
